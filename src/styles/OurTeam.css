@@ -1,0 +1,89 @@
+/* Our Team Section - Amethyst-Lilac Theme */
+#our-team {
+  
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #e6d6ff; /* Soft lilac background */
+  border-radius: 15px;
+  box-shadow: 4px 4px 12px rgba(80, 50, 100, 0.2);
+  text-align: center;
+  border: 2px solid #b19cd9; /* Amethyst border */
+}
+
+/* Heading Styling */
+#our-team h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #6a498f; /* Rich amethyst */
+  text-shadow: 1px 1px 3px rgba(80, 50, 100, 0.2);
+  margin-bottom: 15px;
+}
+
+/* Paragraph Styling */
+#our-team p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  color: #5a3e76; /* Deep lilac */
+  line-height: 1.6;
+}
+
+/* Team Grid */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Individual Team Member Card */
+.team-member {
+  background: #d8bfea; /* Muted lavender */
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(80, 50, 100, 0.15);
+  transition: transform 0.3s ease-in-out;
+  width: 220px;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #b19cd9;
+}
+
+.team-member h3 {
+  font-size: 1.2rem;
+  color: #6a498f;
+  margin: 10px 0 5px;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #4a3b6a;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #our-team {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 80%;
+  }
+}

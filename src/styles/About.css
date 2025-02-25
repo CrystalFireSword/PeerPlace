@@ -1,0 +1,53 @@
+/* Vintage-Themed About Section */
+#about {
+  
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f5f1e3; /* Aged paper background */
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border: 2px solid #c2a476; /* Subtle golden-brown border */
+}
+
+/* Vintage Font Styling */
+#about h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #5a4632; /* Warm brown */
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+#about p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  color: #4a3b2f; /* Dark brown text */
+  line-height: 1.8;
+}
+
+/* Vintage Decorative Elements */
+#about::before {
+  content: "❦";
+  font-size: 3rem;
+  color: #c2a476;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #about {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #about h1 {
+    font-size: 2rem;
+  }
+
+  #about p {
+    font-size: 1.1rem;
+  }
+}

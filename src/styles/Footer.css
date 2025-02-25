@@ -1,0 +1,28 @@
+/* Footer Styling */
+.footer {
+  width: 100%;
+  background-color: #6A5ACD;  /* Amethyst */
+  color: #F8E8FF;  /* Lilac */
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+/* Add subtle shadow for depth */
+.footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer {
+      font-size: 0.9rem;
+      padding: 12px 0;
+  }
+}

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth, signInWithEmailAndPassword } from "../firebase";
+import "../styles/LoginPage.css"; // Make sure CSS is imported
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -13,10 +14,9 @@ function LoginPage() {
     setError("");
 
     try {
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        const user = userCredential.user;
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
 
-      // Example Role Check (You need to implement user role logic in Firebase)
       if (email.includes("@faculty.com")) {
         navigate("/faculty-dashboard");
       } else {
@@ -28,9 +28,9 @@ function LoginPage() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div className="login-container">
       <h1>Login</h1>
-      <form onSubmit={handleLogin}>
+      <form className="login-form" onSubmit={handleLogin}>
         <div>
           <input
             type="email"
@@ -49,7 +49,7 @@ function LoginPage() {
             required
           />
         </div>
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        {error && <p className="error-message">{error}</p>}
         <button type="submit">Login</button>
       </form>
     </div>
