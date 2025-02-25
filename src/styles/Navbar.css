@@ -1,0 +1,99 @@
+/* Basic Navbar Styling */
+.navbar {
+  background: linear-gradient(135deg,rgb(156, 99, 156), #6A5ACD, #8A2BE2); /* Amethyst Gradient */
+  padding: 15px 20px;
+  color: #F8E8FF;  /* Soft Lilac */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar Container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Brand Name */
+.brand h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: #FFF;
+  letter-spacing: 1px;
+}
+
+/* Navbar Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+/* Navbar Links - Modern Button Style */
+.nav-links a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu Button */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #FFF;
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(106, 90, 205, 0.95); /* Semi-transparent Amethyst */
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

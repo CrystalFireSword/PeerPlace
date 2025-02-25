@@ -1,0 +1,63 @@
+/* Apply a common background to the entire landing page */
+.home-container {
+  background-image: url("../assets/home_image3.jpg");
+  background-size: fit;  /* Ensures the image covers the entire background */
+  background-position: fit; /* Centers the image */
+  background-repeat: repeat; /* Prevents repetition */
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cormorant Garamond", serif;
+  position: relative;
+}
+
+/* Dark overlay to improve text readability */
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+/* Ensure sections take full width but maintain a consistent look */
+#home, #about, #our-team, #contact {
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 15px;
+  padding: 40px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+/* Slight lift effect when hovering over sections */
+#home:hover, #about:hover, #our-team:hover, #contact:hover {
+  transform: translateY(-5px);
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .home-container {
+    padding: 10px;
+  }
+
+  #home, #about, #our-team, #contact {
+    width: 95%;
+    padding: 20px;
+  }
+}
