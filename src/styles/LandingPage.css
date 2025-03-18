@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
 /* Apply a common background to the entire landing page */
 .home-container {
   background-image: url("../assets/home_image3.jpg");
@@ -30,7 +33,7 @@
 #home, #about, #our-team, #contact {
   width: 90%;
   max-width: 1200px;
-  border-radius: 15px;
+  border-radius: 1px;
   padding: 40px;
   margin: 20px auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
