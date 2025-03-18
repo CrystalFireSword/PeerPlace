@@ -1,7 +1,9 @@
+// frontend/src/components/LoginPage.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth, signInWithEmailAndPassword } from "../firebase";
-import "../styles/LoginPage.css"; // Make sure CSS is imported
+import "../styles/LoginPage.css";
+
+const API_URL = "http://localhost:5000"; // Your backend URL
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -14,16 +16,31 @@ function LoginPage() {
     setError("");
 
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
+      // Send login credentials to backend
+      const response = await fetch(`${API_URL}/api/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
 
-      if (email.includes("@faculty.com")) {
-        navigate("/faculty-dashboard");
-      } else {
-        navigate("/student-dashboard");
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Login failed");
       }
+
+      // Store the authentication data
+      localStorage.setItem('authToken', data.idToken);
+      localStorage.setItem('uid', data.uid);
+      localStorage.setItem('email', data.email);
+
+      // Navigate to dashboard
+      navigate("/StudentDashboard");
     } catch (err) {
       setError("Invalid email or password. Please try again.");
+      console.error(err);
     }
   };
 
