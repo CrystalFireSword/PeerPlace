@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
 /* Basic Navbar Styling */
 .navbar {
   background: linear-gradient(135deg,rgb(156, 99, 156), #6A5ACD, #8A2BE2); /* Amethyst Gradient */

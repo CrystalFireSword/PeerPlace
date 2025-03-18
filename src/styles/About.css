@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
 /* Vintage-Themed About Section */
 #about {
   
   max-width: 1000px;
   margin: 50px auto;
   padding: 30px;
-  background: #f5f1e3; /* Aged paper background */
-  border-radius: 15px;
+  background: #ffffff; /* Aged paper background */
+  border-radius: 0%;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
   border: 2px solid #c2a476; /* Subtle golden-brown border */
@@ -13,18 +16,20 @@
 
 /* Vintage Font Styling */
 #about h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins-Regular", serif;
   font-size: 2.5rem;
-  color: #5a4632; /* Warm brown */
+  color: #1f255e; 
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 15px;
+  margin-bottom: 40px;
 }
 
 #about p {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.3rem;
+  font-family: "Poppins-Regular", serif;
+  font-size: 1.1rem;
   color: #4a3b2f; /* Dark brown text */
   line-height: 1.8;
+  text-align: justify;
+
 }
 
 /* Vintage Decorative Elements */
@@ -39,7 +44,7 @@
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   #about {
-    width: 90%;
+    width: 100%;
     padding: 20px;
   }
 

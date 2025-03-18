@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
 /* Amethyst-Lilac Themed Contact Section */
 #contact {
   
@@ -8,7 +11,7 @@
   border-radius: 15px;
   box-shadow: 4px 4px 12px rgba(80, 50, 100, 0.2);
   text-align: center;
-  border: 2px solid #b19cd9; /* Amethyst border */
+  border: 2px solid #000000; /* Amethyst border */
 }
 
 /* Heading Styling */
