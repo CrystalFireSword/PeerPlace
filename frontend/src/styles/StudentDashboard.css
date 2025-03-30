@@ -1,0 +1,56 @@
+.student-dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+    padding: 20px;
+    
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .user-details {
+    background-color: rgb(213, 120, 239);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .detail-item {
+    padding: 10px;
+    background-color: #aa43ca;
+    border-radius: 5px;
+  }
+  
+  .dashboard-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .section {
+    background-color: #aa43ca;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
