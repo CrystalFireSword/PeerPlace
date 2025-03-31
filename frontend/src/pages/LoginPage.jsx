@@ -16,8 +16,8 @@ function LoginPage() {
     setError("");
 
     try {
-      // Send login credentials to backend
-      const response = await fetch(`${API_URL}/api/login`, {
+      // Step 1: Authenticate the user
+      const authResponse = await fetch(`${API_URL}/api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,21 +25,41 @@ function LoginPage() {
         body: JSON.stringify({ email, password }),
       });
 
-      const data = await response.json();
+      const authData = await authResponse.json();
 
-      if (!response.ok) {
-        throw new Error(data.error || "Login failed");
+      if (!authResponse.ok) {
+        throw new Error(authData.error || "Login failed");
       }
 
       // Store the authentication data
-      localStorage.setItem('authToken', data.idToken);
-      localStorage.setItem('uid', data.uid);
-      localStorage.setItem('email', data.email);
+      localStorage.setItem('authToken', authData.idToken);
+      localStorage.setItem('uid', authData.uid);
+      localStorage.setItem('email', authData.email);
 
-      // Navigate to dashboard
-      navigate("/StudentDashboard");
+      // Step 2: Get user details including role
+      const userResponse = await fetch(`${API_URL}/api/userByMail/email?email=${encodeURIComponent(email)}`, {
+        headers: {
+          'Authorization': `Bearer ${authData.idToken}`
+        }
+      });
+
+      if (!userResponse.ok) {
+        throw new Error("Failed to fetch user details");
+      }
+
+      const userData = await userResponse.json();
+
+      // Step 3: Redirect based on role
+      if (userData.role === 'student') {
+        navigate("/StudentDashboard");
+      } else if (userData.role === 'faculty') {
+        navigate("/FacultyDashboard");
+      } else {
+        throw new Error("Unknown user role");
+      }
+
     } catch (err) {
-      setError("Invalid email or password. Please try again.");
+      setError(err.message || "Invalid email or password. Please try again.");
       console.error(err);
     }
   };
