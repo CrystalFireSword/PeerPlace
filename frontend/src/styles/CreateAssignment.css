@@ -1,0 +1,121 @@
+/* CreateAssignment.css */
+.create-assignment-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .create-assignment-container h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    background-color: #fdecea;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .assignment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="date"],
+  .form-group input[type="time"],
+  .form-group textarea,
+  .form-group input[type="file"] {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .cancel-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #f1f1f1;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .submit-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .create-assignment-container {
+      padding: 1rem;
+      margin: 1rem;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
