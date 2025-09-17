@@ -50,7 +50,6 @@ app.get('/api/userByMail/email', getUserByEmail);
 app.get('/api/courses', getFacultyCourses);
 app.get('/api/course_assignments/:courseId', getCourseAssignments);
 app.get('/api/submissions/pending', getPendingSubmissions);
-// Add this with your other routes
 app.get('/api/assignments/:assignmentId', getAssignmentWithDocument);
 // app.post('/api/assignments', createAssignment);
 // Start server
